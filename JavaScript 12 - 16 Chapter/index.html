@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 12-16 Chapter Examples</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", sans-serif; }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ff9a00;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+p.intro {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.05));
+  border-radius: 25px;
+  padding: 30px 20px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: rgba(255,255,255,0.05);
+  top: -10%;
+  left: -10%;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #ff9a00;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #f0f0f0;
+  line-height: 1.5;
+}
+
+.result {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.2);
+  color: #ff9a00;
+  font-weight: 600;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>JavaScript 12-16 Chapter Examples</h1>
+  <p class="intro">Interactive examples from "A Smarter Way to Learn JavaScript" — Chapters 12 to 16.</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h2>Chapter 12: if...else Statements</h2>
+      <p>Basic if…else statements to check age and categorize as child, teenager, or adult.</p>
+      <div class="result" id="ageResult"></div>
+    </div>
+
+    <div class="card">
+      <h2>Chapter 13: Testing Multiple Conditions</h2>
+      <p>Check if a number is positive and even/odd.</p>
+      <div class="result" id="numberResult"></div>
+    </div>
+
+    <div class="card">
+      <h2>Chapter 14: Nested if Statements</h2>
+      <p>Password strength checker example.</p>
+      <div class="result" id="passwordResult"></div>
+    </div>
+
+    <div class="card">
+      <h2>Chapter 15: Arrays Basics</h2>
+      <p>Add, remove, and display fruits in an array.</p>
+      <div class="result" id="arrayResult"></div>
+    </div>
+
+    <div class="card">
+      <h2>Chapter 16: Arrays Add/Remove</h2>
+      <p>Demonstrates push() and pop() methods for arrays.</p>
+      <div class="result" id="pushPopResult"></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
