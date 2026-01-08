@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box {
+      background: #fff;
+      padding: 25px;
+      width: 320px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #222;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .result p {
+      margin: 5px 0;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Table Generator</h2>
+
+    <input type="number" id="num" placeholder="Enter a number">
+    <button id="btn">Generate Table</button>
+
+    <div class="result" id="output"></div>
+  </div>
+</body>
+<script src="app.js"></script>
+</html>
