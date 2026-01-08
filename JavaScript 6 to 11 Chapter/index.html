@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 6 to 11 Chapter</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+      background-size: 600% 600%;
+      animation: gradientMove 12s ease infinite;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: #fff;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      padding: 40px 50px;
+      border-radius: 22px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+      animation: popUp 1s ease-out;
+      text-align: center;
+    }
+
+    @keyframes popUp {
+      from { opacity: 0; transform: scale(0.8) translateY(30px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    h1 {
+      color: #00f2fe;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .underline {
+      width: 90px;
+      height: 4px;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      margin: 15px auto 25px auto;
+      border-radius: 50px;
+      animation: lineGrow 1.5s ease;
+    }
+
+    @keyframes lineGrow {
+      from { width: 0; }
+      to { width: 90px; }
+    }
+
+    .example {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .example button {
+      margin-top: 8px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 6px;
+      background: #00f2fe;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .example button:hover {
+      transform: scale(1.05);
+      background: #4facfe;
+    }
+
+    .output {
+      margin-top: 10px;
+      padding: 10px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 8px;
+      font-weight: bold;
+      color: #e6f6ff;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>JavaScript 6 to 11 Chapter Assignment</h1>
+    <div class="underline"></div>
+
+    <div class="example">
+      <p><strong>Chapter 6 — Functions:</strong> Greet User</p>
+      <button onclick="chapter6()">Run Example</button>
+      <div class="output" id="output6"></div>
+    </div>
+
+    <div class="example">
+      <p><strong>Chapter 7 — Arrays:</strong> First & Last Number</p>
+      <button onclick="chapter7()">Run Example</button>
+      <div class="output" id="output7"></div>
+    </div>
+
+    <div class="example">
+      <p><strong>Chapter 8 — Loops:</strong> Display 1–5</p>
+      <button onclick="chapter8()">Run Example</button>
+      <div class="output" id="output8"></div>
+    </div>
+
+    <div class="example">
+      <p><strong>Chapter 9 — Objects:</strong> Student Info</p>
+      <button onclick="chapter9()">Run Example</button>
+      <div class="output" id="output9"></div>
+    </div>
+
+    <div class="example">
+      <p><strong>Chapter 10 — Conditional:</strong> Even / Odd</p>
+      <button onclick="chapter10()">Run Example</button>
+      <div class="output" id="output10"></div>
+    </div>
+
+    <div class="example">
+      <p><strong>Chapter 11 — DOM Manipulation:</strong> Change Text</p>
+      <button onclick="chapter11()">Run Example</button>
+      <div class="output" id="output11">Click button to change text!</div>
+    </div>
+  </div>
+</body>
+<script src="app.js"></script>
+</html>

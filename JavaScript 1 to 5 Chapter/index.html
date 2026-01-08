@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JavaScript 1 to 5 Chapter</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: #00f2fe;
+      filter: blur(120px);
+      animation: glowMove 8s infinite alternate;
+    }
+
+    @keyframes glowMove {
+      from {
+        transform: translate(-150px, -100px);
+      }
+      to {
+        transform: translate(150px, 120px);
+      }
+    }
+
+    .container {
+      position: relative;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      padding: 45px 55px;
+      border-radius: 18px;
+      text-align: center;
+      max-width: 520px;
+      width: 90%;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+      animation: cardEntry 1.2s ease-out;
+    }
+
+    @keyframes cardEntry {
+      from {
+        opacity: 0;
+        transform: scale(0.8) translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+    .line {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      margin: 18px auto;
+      border-radius: 10px;
+      animation: lineGrow 1.5s ease;
+    }
+
+    @keyframes lineGrow {
+      from {
+        width: 0;
+      }
+      to {
+        width: 80px;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #e0f7ff;
+      opacity: 0;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 1.2s;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>JavaScript 1 to 5 Chapter Assignment</h1>
+    <div class="line"></div>
+
+    <p> 
+      Chapters 1 to 5<br>
+      Alerts • Variables • Math Expressions
+    </p>
+  </div>
+
+</body>
+
+<script src="app.js"></script>
+</html>

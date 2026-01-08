@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Percentage Calculator using Prompt</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+      background-size: 600% 600%;
+      animation: gradientMove 10s ease infinite;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      overflow: hidden;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      background: rgba(79, 172, 254, 0.35);
+      filter: blur(90px);
+      border-radius: 50%;
+      animation: float 8s infinite alternate;
+    }
+
+    body::after {
+      background: rgba(0, 242, 254, 0.35);
+      animation-delay: 3s;
+    }
+
+    @keyframes float {
+      from { transform: translate(-120px, -80px); }
+      to { transform: translate(140px, 120px); }
+    }
+
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(14px);
+      padding: 50px 70px;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+      animation: popUp 1.2s ease-out;
+      z-index: 1;
+      min-width: 350px;
+    }
+
+    @keyframes popUp {
+      from { opacity: 0; transform: scale(0.75) translateY(50px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #ffffff;
+    }
+
+    .underline {
+      width: 90px;
+      height: 4px;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      margin: 18px auto;
+      border-radius: 50px;
+      animation: lineExpand 1.5s ease;
+    }
+
+    @keyframes lineExpand {
+      from { width: 0; }
+      to { width: 90px; }
+    }
+
+    .result {
+      margin-top: 25px;
+      color: #e6f6ff;
+      font-size: 16px;
+      line-height: 1.7;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 1.2s;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Percentage Calculator Assignment</h1>
+    <div class="underline"></div>
+
+    <div class="result" id="result">
+      Calculating...
+    </div>
+  </div>
+  
+</body>
+<script src="app.js"></script>
+</html>
