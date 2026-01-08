@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome To RK Assignment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #ffd369;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px 20px;
+      border-radius: 16px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #ffd369;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      color: #f1f1f1;
+    }
+
+    .card a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 25px;
+      background: #ffd369;
+      color: #000;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .card a:hover {
+      background: #fff;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome To RK Assignment</h1>
+    <p>
+      This repository contains my JavaScript practice assignments.
+      Click on any assignment below to view the live project.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <h2>JavaScript 1 to 5 Chapter</h2>
+        <p>
+          Basic JavaScript concepts including variables, alerts,
+          conditions, and simple logic building.
+        </p>
+        <a href="./JavaScript 1 to 5 Chapter/index.html">Open Assignment</a>
+      </div>
+
+      <div class="card">
+        <h2>JavaScript 6 to 11 Chapter</h2>
+        <p>
+          Intermediate JavaScript topics such as arrays, loops,
+          functions, and user interaction examples.
+        </p>
+        <a href="./JavaScript 6 to 11 Chapter/index.html">Open Assignment</a>
+      </div>
+
+      <div class="card">
+        <h2>Percentage Calculator</h2>
+        <p>
+          A simple percentage calculator project built using
+          HTML, CSS, and JavaScript logic.
+        </p>
+        <a href="./Percentage Calculator/index.html">Open Assignment</a>
+      </div>
+
+    </div>
+
+    <footer>
+      © 2026 • RK JavaScript Assignment
+    </footer>
+  </div>
+
+</body>
+</html>
