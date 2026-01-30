@@ -1,180 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Welcome To RK Assignment</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", sans-serif;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome To RK Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+      }
 
-    body {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-    }
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
 
-    .container {
-      max-width: 1000px;
-      width: 90%;
-      text-align: center;
-    }
+      .container {
+        max-width: 1000px;
+        width: 90%;
+        text-align: center;
+      }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      color: #ffd369;
-    }
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        color: #ffd369;
+      }
 
-    p {
-      font-size: 1.1rem;
-      color: #e0e0e0;
-      margin-bottom: 40px;
-    }
+      p {
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        margin-bottom: 40px;
+      }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
 
-    .card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 30px 20px;
-      border-radius: 16px;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px 20px;
+        border-radius: 16px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
 
-    .card:hover {
-      transform: translateY(-10px);
-      background: rgba(255, 255, 255, 0.2);
-    }
+      .card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.2);
+      }
 
-    .card h2 {
-      font-size: 1.4rem;
-      margin-bottom: 12px;
-      color: #ffd369;
-    }
+      .card h2 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+        color: #ffd369;
+      }
 
-    .card p {
-      font-size: 0.95rem;
-      margin-bottom: 20px;
-      color: #f1f1f1;
-    }
+      .card p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+        color: #f1f1f1;
+      }
 
-    .card a {
-      display: inline-block;
-      text-decoration: none;
-      padding: 10px 22px;
-      border-radius: 25px;
-      background: #ffd369;
-      color: #000;
-      font-weight: 600;
-      transition: 0.3s ease;
-    }
+      .card a {
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px 22px;
+        border-radius: 25px;
+        background: #ffd369;
+        color: #000;
+        font-weight: 600;
+        transition: 0.3s ease;
+      }
 
-    .card a:hover {
-      background: #fff;
-    }
+      .card a:hover {
+        background: #fff;
+      }
 
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Welcome To RK Assignment</h1>
-    <p>
-      This repository contains my JavaScript practice assignments.
-      Click on any assignment below to view the live project.
-    </p>
+      footer {
+        margin-top: 40px;
+        font-size: 0.9rem;
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome To RK Assignment</h1>
+      <p>
+        This repository contains my JavaScript practice assignments. Click on
+        any assignment below to view the live project.
+      </p>
 
-    <div class="cards">
-      <div class="card">
-        <h2>JavaScript 1 to 5 Chapter</h2>
-        <p>
-          Basic JavaScript concepts including variables, alerts,
-          conditions and simple logic building.
-        </p>
-        <a href="#">Open Assignment</a>
+      <div class="cards">
+        <div class="card">
+          <h2>JavaScript 1 to 5 Chapter</h2>
+          <p>
+            Basic JavaScript concepts including variables, alerts, conditions
+            and simple logic building.
+          </p>
+          <a href="#">Open Assignment</a>
+        </div>
+
+        <div class="card">
+          <h2>JavaScript 6 to 11 Chapter</h2>
+          <p>
+            Intermediate JavaScript topics such as arrays, loops, functions and
+            user interaction examples.
+          </p>
+          <a href="#">Open Assignment</a>
+        </div>
+
+        <div class="card">
+          <h2>Percentage Calculator</h2>
+          <p>
+            A simple percentage calculator project built using HTML, CSS and
+            JavaScript logic.
+          </p>
+          <a href="#">Open Assignment</a>
+        </div>
+
+        <div class="card">
+          <h2>Table Generator</h2>
+          <p>
+            Project for dynamically generating HTML tables using JavaScript
+            loops, arrays and user input handling.
+          </p>
+          <a href="./Table Generator/index.html">Open Assignment</a>
+        </div>
+
+        <div class="card">
+          <h2>JavaScript 12 to 16 Chapter</h2>
+          <p>
+            Advanced topics including objects, DOM manipulation, events, and
+            intermediate problem-solving techniques.
+          </p>
+          <a href="#">Open Assignment</a>
+        </div>
+
+        <div class="card">
+          <h2>JavaScript 17 to 20 Chapter</h2>
+          <p>
+            Covers advanced concepts like ES6 features, promises, async/await
+            and practical projects for deeper understanding.
+          </p>
+          <a href="./JavaScript 17 to 20 Chapter/index.html">Open Assignment</a>
+        </div>
+
+        <div class="card">
+          <h2>Birthday Calculator</h2>
+          <p>
+            A simple web app that calculates days until your next birthday and
+            days since your last birthday. Shows “Happy Birthday” if today is
+            your birthday.
+          </p>
+          <a href="./Birthday Calculator/index.html">Open Assignment</a>
+        </div>
+
+        <div class="card">
+          <h2>Weather App</h2>
+          <p>
+            A responsive weather app built with HTML, CSS, and JavaScript that
+            fetches real-time weather data using an external API. Users can
+            search any city to view current weather conditions.
+          </p>
+          <a href="./Weather App/index.html">Open Assignment</a>
+        </div>
+
+        <div class="card">
+          <h2>Namaz Timing App</h2>
+          <p>
+            A responsive app that displays prayer times for any city in
+            Pakistan. Built with HTML, CSS, and JavaScript using the Aladhan
+            API.
+          </p>
+          <a href="./Namaz Timing App/index.html">Open Assignment</a>
+        </div>
       </div>
-
-      <div class="card">
-        <h2>JavaScript 6 to 11 Chapter</h2>
-        <p>
-          Intermediate JavaScript topics such as arrays, loops,
-          functions and user interaction examples.
-        </p>
-        <a href="#">Open Assignment</a>
-      </div>
-
-      <div class="card">
-        <h2>Percentage Calculator</h2>
-        <p>
-          A simple percentage calculator project built using
-          HTML, CSS and JavaScript logic.
-        </p>
-        <a href="#">Open Assignment</a>
-      </div>
-
-         <div class="card">
-        <h2>Table Generator</h2>
-        <p>
-          Project for dynamically generating HTML tables using
-          JavaScript loops, arrays and user input handling.
-        </p>
-        <a href="./Table Generator/index.html">Open Assignment</a>
-      </div>
-
-      <div class="card">
-        <h2>JavaScript 12 to 16 Chapter</h2>
-        <p>
-          Advanced topics including objects, DOM manipulation, events,
-          and intermediate problem-solving techniques.
-        </p>
-        <a href="#">Open Assignment</a>
-      </div>
-      
-      <div class="card">
-        <h2>JavaScript 17 to 20 Chapter</h2>
-        <p>
-          Covers advanced concepts like ES6 features, promises,
-          async/await and practical projects for deeper understanding.
-        </p>
-        <a href="./JavaScript 17 to 20 Chapter/index.html">Open Assignment</a>
-      </div>
-
-      <div class="card">
-        <h2>Birthday Calculator</h2>
-        <p>
-      A simple web app that calculates days until your next birthday and days since your last birthday. Shows “Happy Birthday” if today is your birthday.
-        </p>
-        <a href="./Birthday Calculator/index.html">Open Assignment</a>
-      </div>
-
-      <div class="card">
-        <h2>Weather App</h2>
-  <p>
-  A responsive weather app built with HTML, CSS, and JavaScript that fetches real-time weather data using an external API. Users can search any city to view current weather conditions.
-</p>
-        <a href="./Weather App/index.html">Open Assignment</a>
-      </div>
+      <footer>© 2026 • RK JavaScript Assignment</footer>
     </div>
-    <footer>
-      © 2026 • RK JavaScript Assignment
-    </footer>
-  </div>
-</body>
+  </body>
 </html>
