@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaz Timing App</title>
+
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #0f766e, #14b8a6);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+
+      .prayer-box {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 16px;
+        width: 100%;
+        max-width: 380px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        color: #0f766e;
+      }
+
+      input,
+      button {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        outline: none;
+      }
+
+      button {
+        background: #0f766e;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #115e59;
+      }
+
+      .result {
+        margin-top: 20px;
+        text-align: left;
+        font-size: 15px;
+      }
+
+      .time {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .time strong {
+        color: #0f766e;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="prayer-box">
+      <h2>Namaz Timing</h2>
+
+      <input type="text" id="city" placeholder="Enter city name" />
+
+      <button onclick="getNamazTiming()">Check Namaz Timing</button>
+
+      <div class="result" id="result"></div>
+    </div>
+
+    <script>
+      function getNamazTiming() {
+        const city = document.getElementById('city').value.trim();
+        const result = document.getElementById('result');
+
+        if (city === '') {
+          alert('Please enter city name');
+          return;
+        }
+
+        fetch(
+          `https://api.aladhan.com/v1/timingsByCity?city=${city}&country=Pakistan&method=2`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.code !== 200) {
+              result.innerHTML = '<p>City not available</p>';
+              return;
+            }
+
+            const t = data.data.timings;
+
+            result.innerHTML = `
+            <p><strong>City:</strong> ${city}</p>
+            <div class="time"><span>Fajr</span><strong>${t.Fajr}</strong></div>
+            <div class="time"><span>Dhuhr</span><strong>${t.Dhuhr}</strong></div>
+            <div class="time"><span>Asr</span><strong>${t.Asr}</strong></div>
+            <div class="time"><span>Maghrib</span><strong>${t.Maghrib}</strong></div>
+            <div class="time"><span>Isha</span><strong>${t.Isha}</strong></div>
+          `;
+          })
+          .catch(() => {
+            result.innerHTML = '<p>Something went wrong</p>';
+          });
+      }
+    </script>
+  </body>
+</html>
