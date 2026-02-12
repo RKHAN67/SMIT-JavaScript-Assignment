@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events Assignment 43-48</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h2>Alert on Link Click</h2>
+    <a href="#" onclick="showAlert()">Click Me</a>
+
+    <h2>Mobile Images Click Alert</h2>
+    <div class="flex-row">
+      <img
+        src="./images/3.jpeg"
+        onclick="mobileAlert()"
+        width="300"
+        height="300"
+      />
+      <img
+        src="./images/4.jpeg"
+        onclick="mobileAlert()"
+        width="300"
+        height="300"
+      />
+      <img
+        src="./images/5.jpeg"
+        onclick="mobileAlert()"
+        width="300"
+        height="300"
+      />
+    </div>
+
+    <h2>Student Records</h2>
+    <div class="form-box">
+      <h3>Add Student</h3>
+      <input type="text" id="name" placeholder="Enter Name" />
+      <input type="text" id="class" placeholder="Enter Class" />
+      <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <table id="studentTable">
+      <tr>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Action</th>
+      </tr>
+    </table>
+
+    <h2>Image Mouse Over & Mouse Out</h2>
+    <img
+      id="changeImage"
+      src="./images/1.jpeg"
+      width="400"
+      height="400"
+      onmouseover="changePic()"
+      onmouseout="originalPic()"
+    />
+
+    <h2>Counter</h2>
+    <div class="counter-container">
+      <button onclick="decrease()">Decrease</button>
+      <div class="counter-box" id="counterValue">0</div>
+      <button onclick="increase()">Increase</button>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
